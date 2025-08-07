@@ -87,12 +87,9 @@ async def api_health_check():
     }
 
 
-# Include API routers here (will be added in future phases)
-# from app.api.routers import users, resumes, jobs, matching
-# app.include_router(users.router, prefix=settings.api_prefix)
-# app.include_router(resumes.router, prefix=settings.api_prefix)
-# app.include_router(jobs.router, prefix=settings.api_prefix)
-# app.include_router(matching.router, prefix=settings.api_prefix)
+# Include API routers
+from app.api.routers import resumes
+app.include_router(resumes.router, prefix=settings.api_prefix)
 
 
 if __name__ == "__main__":
